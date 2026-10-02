@@ -1,0 +1,193 @@
+/* 1. Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    min-height: 100vh;
+    background-color: #f9fafb;
+}
+
+.main-container {
+    display: flex;
+    width: 100%;
+}
+
+/* 2. Left Sidebar */
+.sidebar {
+    flex: 0 0 35%; /* Takes exactly 35% of the screen width */
+    max-width: 35%;
+    background-image: url('images/background.jpg'); 
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.logo-container {
+    margin-top: 20vh;
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-icon {
+    height: 80px; 
+    width: auto;
+    max-width: 100%; 
+}
+
+.logo-text {
+    font-family: 'Cinzel', serif;
+    font-size: 4rem;
+    color: white;
+    letter-spacing: 5px;
+}
+
+.credit {
+    color: white;
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.3); 
+}
+
+/* 3. Right Content Area */
+.content {
+    flex: 1; /* Takes the remaining 65% of the screen */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.content-header {
+    padding: 40px 10% 30px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+.sub-text {
+    margin-top: 20px;
+}
+
+/* 4. The Form Section */
+.form-section {
+    background-color: white;
+    padding: 40px 10%; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.form-fieldset {
+    border: none; 
+    padding: 0;
+    margin: 0;
+}
+
+.form-legend {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: #1F2937;
+    font-weight: bold;
+}
+
+.flex-wrapper {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 25px 40px; 
+    max-width: 900px; 
+    margin: 0 auto; 
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    /* Take up exactly 50% of the row, MINUS half of the 40px gap */
+    flex: 1 1 calc(50% - 20px); 
+    min-width: 200px; 
+}
+
+.input-group label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #4b5563;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    padding: 8px 12px;
+    border: 1px solid #E5E7EB; 
+    border-radius: 4px;
+    font-size: 1rem;
+    outline: none; 
+    transition: all 0.2s ease-in-out;
+}
+
+.input-group input:focus {
+    border-color: #3b82f6;
+    box-shadow: 2px 2px 5px rgba(59, 130, 246, 0.2); 
+}
+
+.input-group input[type="password"]:user-invalid {
+    border-color: red;
+    box-shadow: 2px 2px 5px rgba(255, 0, 0, 0.2);
+}
+
+.input-group input[type="email"]:user-invalid {
+    border-color: #dc2626;
+    box-shadow: 2px 2px 5px rgba(220, 38, 38, 0.2);
+}
+
+.error-msg {
+    display: none;
+    color: #dc2626; 
+    font-size: 0.75rem;
+    margin-top: 5px;
+    font-weight: 500;
+}
+
+.input-group input[type="email"]:user-invalid ~ .error-msg {
+    display: block; 
+}
+
+.content-footer {
+    padding: 30px 10%; 
+}
+
+button {
+    background-color: #596D48; 
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 12px 40px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 2px 4px 6px rgba(0,0,0,0.2);
+    margin-bottom: 20px;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #455438; 
+}
+
+.content-footer a {
+    color: #596D48;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.content-footer a:hover {
+    text-decoration: underline;
+}
